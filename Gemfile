@@ -55,3 +55,9 @@ gem 'devise'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
+<<<<<<< Updated upstream
+=======
+gem "font-awesome-rails"
+gem "haml-rails"
+gem "pry-rails"
+>>>>>>> Stashed changes

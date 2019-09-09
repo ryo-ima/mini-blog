@@ -1,0 +1,10 @@
+.blogform
+  = form_for @blog do |f|
+    .blogform__title
+    = f.label :title
+    %br/
+    = f.text_area :title
+    = f.label :text
+    %br/
+    = f.text_area :body, class:"blogform__text"
+    = f.submit 'Send', class: 'form__submit'
