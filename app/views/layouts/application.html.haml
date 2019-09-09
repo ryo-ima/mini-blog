@@ -27,7 +27,7 @@
                 %a{href:  "/users/sign_in"} サインイン
             %li
               - if user_signed_in?
-                %a{href: "/users/sign_out"} サインアウト
+                = link_to "サインアウト", destroy_user_session_path, method: :delete
               - else
                 %a{href: "/users/sign_up"} サインアップ
     = yield

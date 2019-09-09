@@ -57,3 +57,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "font-awesome-rails"
 gem "haml-rails"
+gem "pry-rails"
