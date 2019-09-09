@@ -1,0 +1,10 @@
+.main-contents
+  .main-contents__title
+    = blog.title
+  .main-contents__text
+    = blog.body  
+  .main-contents__config
+    = link_to "詳細", blog_path(blog), method: :get
+    - if user_signed_in? && current_user.id == blog.user.id
+      = link_to "編集", edit_blog_path(blog), method: :get
+      = link_to "削除", blog_path(blog), method: :delete
