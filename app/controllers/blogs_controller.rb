@@ -1,24 +1,11 @@
 class BlogsController < ApplicationController
-  
+  before_action :move_to_index, except: [:index]
+
   def index
   end
 
-  def show
-  end
 
-  def new
+  def move_to_index
+    redirect_to :action => "index" unless user_signed_in?
   end
-
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
 end

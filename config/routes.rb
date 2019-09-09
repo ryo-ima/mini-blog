@@ -2,9 +2,6 @@ Rails.application.routes.draw do
   
   devise_for :users
   root 'blogs#index'
-  resources :users
-  resources :blogs do
-    resources :comments
-  end
+  resources :blogs , only:[:index]
 
 end
