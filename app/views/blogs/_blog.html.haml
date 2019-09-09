@@ -1,8 +1,8 @@
 .main-contents
   .main-contents__title
-    = blog.title
+    = "タイトル:#{blog.title} 投稿者：#{blog.user.name}"
   .main-contents__text
-    = blog.body  
+    = "本文:#{blog.body}"  
   .main-contents__config
     = link_to "詳細", blog_path(blog), method: :get
     - if user_signed_in? && current_user.id == blog.user.id

@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
   end
 
   def show
-    redirect_to action: "index"
+    @blog = Blog.find(params[:id])
   end
 
   def new
