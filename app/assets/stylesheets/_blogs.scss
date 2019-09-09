@@ -1,0 +1,25 @@
+.nav-wrapper{
+  background-color: #920000;
+}
+
+
+.main-contents{
+  width:600px;
+  background-color:orange; 
+  height:150px;
+  margin:0 auto;
+  &__title{
+    height:40px;
+    font-size:24px;
+    border-bottom:solid 2px #df8602;
+    text-align:left;
+    word-wrap: break-word;
+    overflow-y: scroll;
+  }
+  &__text{
+    font-size:16px;
+    height:110px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+  }
+}

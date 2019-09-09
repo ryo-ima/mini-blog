@@ -18,7 +18,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
+|title|string|null: false|
+|body|text|null: false|
 |image|string||
 |user|references|null: false, foreign_key: true|
 
