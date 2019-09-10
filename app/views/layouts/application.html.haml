@@ -15,6 +15,8 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  - if user_signed_in?
+    %html.background-color.orange
   %body
     .navbar-fixed
       %nav

@@ -7,7 +7,7 @@
   width:600px;
   background-color:orange; 
   height:190px;
-  margin:40px auto;
+  margin:20px auto;
   border:solid 2px #df8602;
   &__title{
     height:40px;
@@ -28,4 +28,8 @@
     font-size:20px;
     color:skyblue;
   }
+}
+.edit-title{
+  text-align: center;
+  font-size: 36px;
 }
