@@ -19,10 +19,13 @@ class BlogsController < ApplicationController
   end
 
   def edit
-    redirect_to action: "index"
+    @blog = Blog.find(params[:id])
   end
 
   def update
+    blog = Blog.find(params[:id])
+    blog.update(title: blog_params[:title],body: blog_params[:body],image: blog_params[:image],user_id: current_user.id)
+    redirect_to action: "index"
   end
 
   def destroy
