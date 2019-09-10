@@ -15,9 +15,10 @@
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  - if user_signed_in?
-    %html.background-color.orange
   %body
+    - if user_signed_in?
+      .usersignedin 
+        = "#{current_user.name}がログイン中です#{current_user.name}がログイン中です#{current_user.name}がログイン中です#{current_user.name}がログイン中です#{current_user.name}がログイン中です#{current_user.name}がログイン中です#{current_user.name}がログイン中です"
     .navbar-fixed
       %nav
         .nav-wrapper

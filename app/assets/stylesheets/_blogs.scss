@@ -1,14 +1,19 @@
+body{
+  height:700px;
+}
 .nav-wrapper{
   background-color: #920000;
 }
 
 
 .main-contents{
+  position:relative;
   width:600px;
   background-color:orange; 
-  height:190px;
+  min-height:100px;
   margin:20px auto;
   border:solid 2px #df8602;
+  z-index:2;
   &__title{
     height:40px;
     font-size:24px;
@@ -16,20 +21,48 @@
     text-align:left;
     word-wrap: break-word;
     overflow-y: scroll;
+    position:relative;
+    z-index:1;
   }
   &__text{
-    font-size:16px;
-    height:110px;
+    font-size:20px;
     word-wrap: break-word;
     overflow-y: scroll;
+    position:relative;
+    z-index:1;
   }
   &__config{
-    height:40px;
-    font-size:20px;
+    font-size:16px;
+    border-top:solid 0.1px #fc9700;
     color:skyblue;
+    position:relative;
+    z-index:1;
   }
 }
 .edit-title{
   text-align: center;
   font-size: 36px;
+  position:relative;
+  z-index:1;
+}
+
+.usersignedin{
+  background-color:rgb(192, 125, 0);
+  position      : absolute;             /* 親要素からの相対位置 */
+  display       : inline-block;         /* インラインブロック化 */
+  word-wrap     : break-word;              /* 折り返ししない       */
+  font-size     : 84px;                 /* 背景透かし文字サイズ */
+  font-weight   : bold;                 /* 太字                 */
+  color         : rgb(207, 135, 2); /* 背景透かし文字色     */
+                                        /* 中心寄せ＆角度       */
+  top           : 64px;
+  z-index       : 0  ;
+}
+
+.pagination{
+  text-align:center;
+  color:black;
+  position:relative;
+  background-color:orange;
+  bottom:0;
 }

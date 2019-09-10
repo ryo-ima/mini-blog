@@ -2,9 +2,13 @@
   .main-contents__title
     = "タイトル:#{blog.title} 投稿者：#{blog.user.name}"
   .main-contents__text
-    = "本文:#{blog.body}"  
+    -if current_page?(blog_path(blog))
+      = "本文:#{blog.body}"
+    -else
+      = "本文:#{blog.body.slice(0..4)}..." 
   .main-contents__config
-    = link_to "詳細", blog_path(blog), method: :get
+    -unless current_page?(blog_path(blog))
+      = link_to "詳細", blog_path(blog), method: :get
     - if user_signed_in? && current_user.id == blog.user.id
       = link_to "編集", edit_blog_path(blog), method: :get
       = link_to "削除", blog_path(blog), method: :delete

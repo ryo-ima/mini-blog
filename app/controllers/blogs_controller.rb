@@ -1,8 +1,8 @@
 class BlogsController < ApplicationController
-  before_action :move_to_index, except: [:index]
+  before_action :move_to_index, except: [:index,:show]
 
   def index
-    @blogs = Blog.all.order('id DESC')
+    @blogs = Blog.order("id DESC").page(params[:page]).per(4)
   end
 
   def show
