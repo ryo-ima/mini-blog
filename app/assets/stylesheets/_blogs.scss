@@ -51,12 +51,17 @@ body{
   position      : absolute;             /* 親要素からの相対位置 */
   display       : inline-block;         /* インラインブロック化 */
   word-wrap     : break-word;              /* 折り返ししない       */
-  font-size     : 84px;                 /* 背景透かし文字サイズ */
+  font-size     : 36px;                 /* 背景透かし文字サイズ */
   font-weight   : bold;                 /* 太字                 */
   color         : rgb(207, 135, 2); /* 背景透かし文字色     */
                                         /* 中心寄せ＆角度       */
   top           : 64px;
   z-index       : 0  ;
+  -ms-user-select: none; /* IE 10+ */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .pagination{
