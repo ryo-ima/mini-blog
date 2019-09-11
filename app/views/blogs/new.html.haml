@@ -1,5 +1,5 @@
 .edit-title
   新規投稿画面
--# .timer 
--#   = data-seconds-left="180"
+= render partial: 'timer'
+<div class="timer" data-seconds-left=20></div>
 = render partial: 'edit' , locals: {blog: @blog}

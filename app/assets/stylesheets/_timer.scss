@@ -1,0 +1,29 @@
+.timer, .timer-done, .timer-loop {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  padding:10px;
+  position:relative;
+  width: 150px;
+  margin: 0 auto;
+}
+
+// These are the default CSS classes
+// used by this plugin. Use these values
+// for a basic style to get started.
+
+.jst-hours {
+  float: left;
+}
+.jst-minutes {
+  float: left;
+}
+.jst-seconds {
+  float: left;
+}
+.jst-clearDiv {
+  clear: both;
+}
+.jst-timeout {
+  color: red;
+}
