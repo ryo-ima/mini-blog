@@ -1,8 +1,15 @@
 :javascript
   $(function(){
     $('.timer').startTimer({
-      onComplete: function(element){
-        element.addClass('is-complete');
+        onComplete: function(){
+        jQuery(function() {
+            jQuery('input').each(function(){ // 対象要素を指定
+                var txt = jQuery(this).val();
+                jQuery(this).val(
+                    txt.replace('Send','時間切れ') // 置換対象の文字列を指定し、次に置換する文字列を（削除なら空で）
+                );
+            });
+        });
       }
     });
   });
