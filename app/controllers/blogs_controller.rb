@@ -1,8 +1,6 @@
 class BlogsController < ApplicationController
-  before_action :move_to_index, except: [:index,:show]
-
   def index
-    @blogs = Blog.order("id DESC").page(params[:page]).per(4)
+    @blogs = Blog.includes(:user).order("id DESC").page(params[:page]).per(4)
   end
 
   def show
@@ -39,8 +37,5 @@ class BlogsController < ApplicationController
     params.require(:blog).permit(:title, :body, :image)
   end
 
-  def move_to_index
-    redirect_to action: "index" unless user_signed_in?
-  end
 
 end
